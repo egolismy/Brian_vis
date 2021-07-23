@@ -1,0 +1,72 @@
+<!doctype = HTML> 
+<head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <style>
+       body {
+           background-color: white;
+       }
+
+       #erp {
+        width: 100px;
+      height: 100px;
+      background: blue;
+       }
+
+       #spectra {
+
+        width: 100px;
+      height: 100px;
+      background: red;
+       }
+
+       #ersp {
+        width: 100px;
+      height: 1px;
+      top: -100;
+      left: 1886;
+      position: relative;
+       }
+
+       h1 {
+           font-family: Arial, Helvetica, sans-serif;
+       }
+
+       p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+       }
+
+    </style>
+</head>
+<body>
+        <h1>Brian dipole only</h1>
+        <p><a href="./figs1_perm.html"> Permutation</a></p> <br>
+        <p><a href="./figs2_param.html"> Switch clusterings</a></p> 
+        
+        
+
+        <div id = "erp" style="float: left; margin-right: 800px;"></div>
+        <div id = "spectra" style="float: left; margin-right: 200px;"></div>
+        <div id = "ersp"></div>
+    <script>
+        for (var i = 3; i < 15; i++) {
+            let erp_div = d3.select("#erp")
+                        .append('img')
+                        .attr('src', './brian_clustering1/parametric/erp/erp'+i+'.jpg')
+                }
+        
+        for (var i = 3; i < 15; i++) {
+            let spec_div = d3.select("#spectra")
+                        .append('img')
+                        .attr('src', './brian_clustering1/parametric/spectra/spec'+i+'.jpg')
+                }
+
+        for (var i = 3; i < 15; i++) {
+            let ersp_div = d3.select("#ersp")
+                        .append('img')
+                        .attr('src', './brian_clustering1/parametric/ersp/ersp'+i+'.jpg')
+                }
+
+    </script>
+</body>
